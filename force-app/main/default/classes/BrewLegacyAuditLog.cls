@@ -1,12 +1,12 @@
 /**
- * Demonstrates Nimbus's API-version mismatch warning. This class
+ * Demonstrates Renmy's API-version mismatch warning. This class
  * declares apiVersion 52.0 (Spring '21) in its sibling .cls-meta.xml
  * — but uses System.Assert.areEqual, which Salesforce introduced in
  * API 56.0 (Summer '22). On a real org, deploying this code to a
  * production org would fail with a cryptic "method does not exist"
  * error at install time.
  *
- * When Nimbus runs the test suite, it surfaces this mismatch as a
+ * When Renmy runs the test suite, it surfaces this mismatch as a
  * warning at the start of the run:
  *
  *     ⚠ src/.../BrewLegacyAuditLog.cls:N  references
@@ -28,7 +28,7 @@ public class BrewLegacyAuditLog {
 
     public static Boolean verifyOrderTotal(Decimal expected, Decimal actual) {
         // System.Assert.areEqual is API 56.0+. With apiVersion 52.0
-        // declared in the meta.xml, Nimbus warns about the mismatch.
+        // declared in the meta.xml, Renmy warns about the mismatch.
         System.Assert.areEqual(expected, actual, 'order total mismatch');
         return true;
     }

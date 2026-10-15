@@ -1,8 +1,8 @@
 /**
  * Composes the welcome email sent to a new account on enrollment.
- * Demonstrates Nimbus's handling of Apex `System.Label` references —
+ * Demonstrates Renmy's handling of Apex `System.Label` references —
  * the labels live in `force-app/main/default/labels/CustomLabels.labels-meta.xml`
- * and Nimbus loads them at Setup time, so `Label.BrewWelcomeSubject`
+ * and Renmy loads them at Setup time, so `Label.BrewWelcomeSubject`
  * resolves to the right value during tests with no per-test setup.
  *
  * Labels that need to differ between environments (e.g. an
@@ -43,7 +43,7 @@ public with sharing class BrewWelcomeMailer {
 
     /**
      * Returns the support signoff. A multi-line label (note the
-     * embedded newline in the labels-meta.xml file) — Nimbus
+     * embedded newline in the labels-meta.xml file) — Renmy
      * preserves it intact through the loader.
      */
     public static String supportSignoff() {

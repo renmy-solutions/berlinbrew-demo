@@ -1,9 +1,9 @@
 # stubs/
 
 This directory holds **user stubs** for managed packages and types
-Nimbus doesn't know about natively. If your tests reference types from
+Renmy doesn't know about natively. If your tests reference types from
 a managed package — for example `Nebula.LogEntryEventBuilder` from
-nebula-logger or anything in the `fflib_` namespace — Nimbus needs to
+nebula-logger or anything in the `fflib_` namespace — Renmy needs to
 know how to treat them.
 
 ## When you need a stub
@@ -14,7 +14,7 @@ You'll know when you see a warning like:
 ⚠ Found references to managed package 'Nebula' with no stub configured.
 ```
 
-That's Nimbus telling you it encountered a type it can't resolve.
+That's Renmy telling you it encountered a type it can't resolve.
 
 ## Two ways to handle managed packages
 
@@ -26,7 +26,7 @@ Add the namespace to `nimbus.properties`:
 nimbus.stubs.namespaces=Nebula,fflib
 ```
 
-Nimbus will silently auto-stub any reference to a type in those
+Renmy will silently auto-stub any reference to a type in those
 namespaces. Method calls return null/zero/empty, side effects are
 no-ops. Matching is case-insensitive (Apex itself is). This is what
 you want 95% of the time — managed packages your tests don't actually
@@ -51,7 +51,7 @@ stubs/
                 └── Hoplog__Message__c.field-meta.xml
 ```
 
-Nimbus loads:
+Renmy loads:
 
 - **Apex classes** under `stubs/<Pkg>/` so type-position references
   (`Hoplog.Logger ctx = ...`) bind cleanly.
@@ -65,10 +65,10 @@ dependencies cleanly separated. Adding `Nebula` later is just
 `stubs/Nebula/` next to `stubs/Hoplog/`.
 
 By convention, capitalize the namespace folder and class name —
-Nimbus matches case-insensitively but consistent capitalization is
+Renmy matches case-insensitively but consistent capitalization is
 clearer on grep and in code review.
 
-Full reference: https://testnimbus.dev/docs/managed-packages
+Full reference: https://renmy.net/docs/managed-packages
 
 ## Commit this directory
 

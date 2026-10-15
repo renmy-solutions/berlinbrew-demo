@@ -11,5 +11,5 @@
 
 - [ ] Short-lived branch off `main` (trunk-based)
 - [ ] Apex tests added/updated for the change
-- [ ] `nimbus test "*" --profile ci --coverage` passes locally (≥ 75% coverage)
+- [ ] `renmy test "*" --profile ci --coverage` passes locally (≥ 75% coverage)
 - [ ] No deployment metadata or org-specific values committed

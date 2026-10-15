@@ -1,6 +1,6 @@
 # Mass update, dry run first — recording runbook
 
-A ~3 minute demo: get data out of nimbus, edit it like a normal human in a
+A ~3 minute demo: get data out of Renmy, edit it like a normal human in a
 spreadsheet, and find out what it would really do **before** anything touches an
 org. The point to land is the last one: a spreadsheet of six harmless-looking
 edits quietly puts two customers on credit hold, and you can see that on your
@@ -10,11 +10,11 @@ own machine, in seconds, with nothing deployed.
 
 ```bash
 cd berlinbrew-demo
-nimbus reset               # the six demo accounts come back automatically
+renmy reset                # the six demo accounts come back automatically
 ```
 
-Use `nimbus reset`, not `nimbus data reset`: a database that already holds
-rows seeded by an older nimbus keeps them, and you end up with two copies of
+Use `renmy reset`, not `renmy data reset`: a database that already holds
+rows seeded by an older release keeps them, and you end up with two copies of
 every account under different Ids.
 
 The accounts are seeded from `nimbus.properties` (`nimbus.seed.row.Account.*`),
@@ -22,7 +22,7 @@ so they are simply there for the daemon, the IDE and the CLI, with stable Ids.
 Nothing to run by hand. Check them if you like:
 
 ```bash
-nimbus soql "SELECT Name, LifetimeValue__c, OnCreditHold__c FROM Account ORDER BY Name"
+renmy soql "SELECT Name, LifetimeValue__c, OnCreditHold__c FROM Account ORDER BY Name"
 ```
 
 Every one starts **off** credit hold, with a tidy website and phone — so
@@ -52,7 +52,7 @@ whole demo.
 
 ## Act 1 — getting data out (~30s)
 
-Nimbus tool window → **SOQL** tab. Run:
+Renmy tool window → **SOQL** tab. Run:
 
 ```sql
 SELECT Id, Name, LifetimeValue__c, Website, Phone
@@ -80,7 +80,7 @@ Cut to the spreadsheet. Walk the four edits without dwelling:
 
 ## Act 3 — the dry run (~45s)
 
-Nimbus tool window → **Mass Update** tab.
+Renmy tool window → **Mass Update** tab.
 
 1. **Object:** Account
 2. **Choose file:** `scripts/demo/lifetime-value-corrections.csv`

@@ -5,9 +5,9 @@
  * its own per-test transaction that rolls back on exit, so setup
  * data is reused but mutations don't leak between tests.
  *
- * Why this is interesting for a Nimbus demo:
+ * Why this is interesting for a Renmy demo:
  *
- * Nimbus implements the @testSetup contract faithfully:
+ * Renmy implements the @testSetup contract faithfully:
  *   - The setup method runs ONCE per test class.
  *   - Records inserted in setup are visible to every test method.
  *   - DML inside a test method is rolled back per-test (the next

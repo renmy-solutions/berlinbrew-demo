@@ -11,8 +11,8 @@
  *   - The real `Hoplog` package isn't in our repo (it ships as a
  *     compiled managed package installed in the org).
  *   - `nimbus.stubs.namespaces=Hoplog` in nimbus.properties tells
- *     Nimbus the namespace is intentional, but for type-position
- *     references (`Hoplog.Logger.info(...)`) Nimbus needs an actual
+ *     Renmy the namespace is intentional, but for type-position
+ *     references (`Hoplog.Logger.info(...)`) Renmy needs an actual
  *     class definition to bind to.
  *   - Drop one .cls per public class you reference inside the
  *     package's folder (`stubs/<Pkg>/`). Apex is case-insensitive,
