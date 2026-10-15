@@ -1,5 +1,5 @@
 /**
- * Tests for BrewRegionalConfig. Demonstrates Nimbus's automatic
+ * Tests for BrewRegionalConfig. Demonstrates Renmy's automatic
  * loading of `customMetadata/*.md-meta.xml` records — three records
  * (EU, US, UK) are visible to SOQL during these tests without any
  * test-time setup.

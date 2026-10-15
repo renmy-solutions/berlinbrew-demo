@@ -4,7 +4,7 @@
  * EU, US, UK — each carrying free-shipping thresholds, default
  * subscription cadence, and loyalty-enabled flag.
  *
- * Why this is interesting for a Nimbus demo:
+ * Why this is interesting for a Renmy demo:
  *
  * Custom metadata records normally live in the org. Salesforce loads
  * them when an org boots and they're queryable like any other SObject.
@@ -12,7 +12,7 @@
  * entirely (returning empty lists from the SOQL) or require manual
  * stubbing in every test.
  *
- * Nimbus reads the project's `customMetadata/*.md-meta.xml` files at
+ * Renmy reads the project's `customMetadata/*.md-meta.xml` files at
  * Setup time and seeds them into the local database — so a SOQL like
  * `SELECT Region__c FROM BrewConfig__mdt` returns three rows during
  * tests, exactly the way it would on a real org. No test-time stub
@@ -20,7 +20,7 @@
  *
  * The service caches the lookup map at class-load time (Apex static
  * initializer). On a real org this is a one-shot SOQL per transaction;
- * in Nimbus it's the same — the embedded Postgres roundtrip is sub-ms.
+ * in Renmy it's the same — the embedded Postgres roundtrip is sub-ms.
  */
 public with sharing class BrewRegionalConfig {
 

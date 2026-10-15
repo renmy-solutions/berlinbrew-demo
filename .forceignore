@@ -2,9 +2,9 @@
 #
 # Anything listed here is excluded from real-Salesforce deploys
 # (sf project deploy / sf project retrieve) but still part of the
-# project source for Nimbus.
+# project source for Renmy.
 #
-# This file is one of the points of the demo: Nimbus can run code
+# This file is one of the points of the demo: Renmy can run code
 # that wouldn't deploy to your org without dependencies that don't
 # exist in your org. That's the whole reason fast local execution
 # matters in the first place.
@@ -17,7 +17,7 @@
 # deploys. The Apex classes here that CALL into Hoplog must also be
 # excluded, because a real-org deploy would fail with "Variable does
 # not exist: Hoplog.Logger" since the package isn't installed.
-# Tests run cleanly on Nimbus via the `nimbus.stubs.namespaces=Hoplog`
+# Tests run cleanly on Renmy via the `nimbus.stubs.namespaces=Hoplog`
 # declaration in nimbus.properties plus the local schema XML.
 force-app/main/default/classes/BrewAuditLogger.cls
 force-app/main/default/classes/BrewAuditLogger.cls-meta.xml
@@ -41,7 +41,7 @@ stubs/
 # while declaring apiVersion 52.0 in its meta.xml. Real Salesforce
 # would reject the deploy as a method-not-found error at the API
 # version mismatch. The whole point of this file is to demonstrate
-# Nimbus's API-version mismatch warning, which fires before deploy —
+# Renmy's API-version mismatch warning, which fires before deploy —
 # don't try to ship it.
 force-app/main/default/classes/BrewLegacyAuditLog.cls
 force-app/main/default/classes/BrewLegacyAuditLog.cls-meta.xml

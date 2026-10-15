@@ -1,5 +1,5 @@
 /**
- * Tests for BrewWelcomeMailer. Demonstrates Nimbus's automatic
+ * Tests for BrewWelcomeMailer. Demonstrates Renmy's automatic
  * loading of custom labels from `labels/CustomLabels.labels-meta.xml`,
  * with optional override via `nimbus.seed.label.*=` in
  * nimbus.properties.

@@ -3,18 +3,18 @@
  * `Hoplog__LogEntry__c` custom object — alongside the in-memory
  * `Hoplog.Logger.*` fan-out that BrewAuditLogger performs.
  *
- * Why this is interesting for a Nimbus demo:
+ * Why this is interesting for a Renmy demo:
  *
  * `Hoplog__LogEntry__c` is shaped like a managed-package custom object
  * (namespace prefix `Hoplog__`, fields `Hoplog__Message__c`,
  * `Hoplog__Severity__c`, `Hoplog__EventType__c`). On a real org you
  * wouldn't define this in source — it'd ship inside the installed
  * package. For the demo we define it under `stubs/Hoplog/objects/`
- * so Nimbus can run DML against it; `stubs/` is `.forceignore`d so
+ * so Renmy can run DML against it; `stubs/` is `.forceignore`d so
  * real-org deploys never try to ship it (which would fail since you
  * can't define objects in a namespace you don't own).
  *
- * Nimbus's schema synthesizer reads the object-meta.xml + field XMLs
+ * Renmy's schema synthesizer reads the object-meta.xml + field XMLs
  * from `stubs/Hoplog/objects/`, creates the matching Postgres table,
  * and INSERT/SELECT/UPDATE on `Hoplog__LogEntry__c` work exactly like
  * any other SObject during tests.

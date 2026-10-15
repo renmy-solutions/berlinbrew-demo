@@ -17,7 +17,7 @@ truth and is always releasable.
 ## CI gate
 
 Every PR runs the [`CI`](.github/workflows/ci.yml) workflow, which executes the
-full Apex suite locally with [Nimbus](https://testnimbus.dev) — no Salesforce
+full Apex suite locally with [Renmy](https://renmy.net) — no Salesforce
 org required. The merge is blocked unless:
 
 - all Apex tests pass, and
@@ -26,7 +26,7 @@ org required. The merge is blocked unless:
 Run the same checks locally before pushing:
 
 ```bash
-nimbus test "*" --profile ci --coverage --coverage-report coverage.xml
+renmy test "*" --profile ci --coverage --coverage-report coverage.xml
 ```
 
 The `%ci` profile (see `nimbus.properties`) enforces strict governor limits and

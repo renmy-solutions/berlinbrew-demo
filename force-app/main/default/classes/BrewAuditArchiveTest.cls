@@ -1,9 +1,9 @@
 /**
- * Tests for BrewAuditArchive. Demonstrates Nimbus running DML and
+ * Tests for BrewAuditArchive. Demonstrates Renmy running DML and
  * SOQL against a managed-package-shaped custom object
  * (`Hoplog__LogEntry__c`) without the managed package being
  * installed. The schema lives at
- * `stubs/Hoplog/objects/Hoplog__LogEntry__c/`; Nimbus loads it the
+ * `stubs/Hoplog/objects/Hoplog__LogEntry__c/`; Renmy loads it the
  * same way it loads any other custom object.
  */
 @isTest

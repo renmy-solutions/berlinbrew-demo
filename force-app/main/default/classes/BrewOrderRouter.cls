@@ -5,11 +5,11 @@
  * Test.createStub on IBrewShippingProvider — no HTTP, no callout
  * mock, no DML on the real provider.
  *
- * Why this is interesting for a Nimbus demo:
+ * Why this is interesting for a Renmy demo:
  *
  * The Stub API (Test.createStub + Apex's StubProvider interface) is
  * a real Salesforce feature for mocking instances of interfaces or
- * non-final classes during tests. Nimbus implements it faithfully so
+ * non-final classes during tests. Renmy implements it faithfully so
  * tests like the ones in BrewOrderRouterTest run end-to-end without
  * a real org or HTTP mocks.
  *

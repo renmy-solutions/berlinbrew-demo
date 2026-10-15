@@ -4,7 +4,7 @@
  * managed package — a fictional third-party logging library installed
  * in the org with namespace `Hoplog`.
  *
- * Why this is interesting for a Nimbus demo:
+ * Why this is interesting for a Renmy demo:
  *
  * The HopLog source isn't in the repo (it lives inside an installed
  * managed package). nimbus.properties declares
@@ -14,7 +14,7 @@
  *
  * For richer scenarios where you need test-time TYPES from the
  * managed package (e.g. a `Hoplog.LogContext ctx = ...` declaration),
- * the auto-stub isn't enough — Nimbus needs the type to actually
+ * the auto-stub isn't enough — Renmy needs the type to actually
  * resolve. That's what `stubs/Hoplog/Hoplog.cls` is for: see
  * `stubs/README.md` for the configuration pattern.
  */

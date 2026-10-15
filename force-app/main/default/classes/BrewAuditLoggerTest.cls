@@ -1,5 +1,5 @@
 /**
- * Tests for BrewAuditLogger. Demonstrates Nimbus's handling of
+ * Tests for BrewAuditLogger. Demonstrates Renmy's handling of
  * managed-package references via the `nimbus.stubs.namespaces=Hoplog`
  * declaration in nimbus.properties.
  *
